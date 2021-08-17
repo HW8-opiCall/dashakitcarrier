@@ -1,0 +1,464 @@
+{
+  "node::track_parcel": {
+    "common.position": {
+      "x": 600,
+      "y": 23
+    }
+  },
+  "node::missed_delivery": {
+    "common.position": {
+      "x": 600,
+      "y": 169
+    }
+  },
+  "node::where_is_point": {
+    "common.position": {
+      "x": 600,
+      "y": 315
+    }
+  },
+  "node::return_shipment": {
+    "common.position": {
+      "x": 600,
+      "y": 461
+    }
+  },
+  "node::root": {
+    "common.position": {
+      "x": 0,
+      "y": 979
+    }
+  },
+  "node::schedule_haircut": {
+    "common.position": {
+      "x": 600,
+      "y": -177.27049321611713
+    }
+  },
+  "node::cancel_appt": {
+    "common.position": {
+      "x": 0,
+      "y": 448.7260717836093
+    }
+  },
+  "node::answering_machine": {
+    "common.position": {
+      "x": 0,
+      "y": 355
+    }
+  },
+  "node::i_will_call_back": {
+    "common.position": {
+      "x": 0,
+      "y": 501
+    }
+  },
+  "node::can_hear_you": {
+    "common.position": {
+      "x": 0,
+      "y": 647
+    }
+  },
+  "node::dont_understand_hangup_params": {
+    "common.position": {
+      "x": 0,
+      "y": 793
+    }
+  },
+  "node::dont_understand": {
+    "common.position": {
+      "x": 0,
+      "y": 43
+    }
+  },
+  "node::dont_understand_preprocessor": {
+    "common.position": {
+      "x": 0,
+      "y": 1165
+    }
+  },
+  "node::hello": {
+    "common.position": {
+      "x": 0,
+      "y": 1251
+    }
+  },
+  "node::hello_preprocessor": {
+    "common.position": {
+      "x": 0,
+      "y": 1417
+    }
+  },
+  "node::i_am_robot": {
+    "common.position": {
+      "x": 0,
+      "y": 1311
+    }
+  },
+  "node::repeat_preprocessor": {
+    "common.position": {
+      "x": 0,
+      "y": 1457
+    }
+  },
+  "node::repeat_hangup_params": {
+    "common.position": {
+      "x": 0,
+      "y": 1603
+    }
+  },
+  "node::repeat": {
+    "common.position": {
+      "x": 0,
+      "y": 1769
+    }
+  },
+  "node::ping": {
+    "common.position": {
+      "x": 0,
+      "y": 1955
+    }
+  },
+  "node::wait": {
+    "common.position": {
+      "x": 0,
+      "y": 2121
+    }
+  },
+  "node::sorry_wont_call": {
+    "common.position": {
+      "x": 0,
+      "y": 2267
+    }
+  },
+  "node::swear_words": {
+    "common.position": {
+      "x": 0,
+      "y": 2413
+    }
+  },
+  "node::hangup": {
+    "common.position": {
+      "x": 0,
+      "y": 2559
+    }
+  },
+  "node::dont_understand_hangup": {
+    "common.position": {
+      "x": 600,
+      "y": 43
+    }
+  },
+  "node::hello_hangup": {
+    "common.position": {
+      "x": 600,
+      "y": 1251
+    }
+  },
+  "node::repeat_or_ping_hangup": {
+    "common.position": {
+      "x": 600,
+      "y": 1862
+    }
+  },
+  "node::cancel_appt_do": {
+    "common.position": {
+      "x": 600,
+      "y": 610.4050916117368
+    }
+  },
+  "node::schedule_haircut_do": {
+    "common.position": {
+      "x": 0,
+      "y": -300.91680261252463
+    }
+  },
+  "node:confirmIntent:confirm": {
+    "common.position": {
+      "x": 0,
+      "y": -240.4250214556137
+    }
+  },
+  "node::confirm_intent": {
+    "common.position": {
+      "x": 0,
+      "y": -197.65710898514396
+    }
+  },
+  "node::repeat_question": {
+    "common.position": {
+      "x": 0,
+      "y": -157.20097556713202
+    }
+  },
+  "node::bye": {
+    "common.position": {
+      "x": 0,
+      "y": 847
+    }
+  },
+  "node::weekday": {
+    "common.position": {
+      "x": -365.58077266352177,
+      "y": -239.30618075505814
+    }
+  },
+  "node:confirmIntent:confirm_intent": {
+    "common.position": {
+      "x": -1.155889526228912,
+      "y": -27.74134862949389
+    }
+  },
+  "node::bye_bye": {
+    "common.position": {
+      "x": 1123.4596555152089,
+      "y": 629.2701722423955
+    }
+  },
+  "node::confirm": {
+    "common.position": {
+      "x": -360.4317476964299,
+      "y": 20.596099868367425
+    }
+  },
+  "node::can_help": {
+    "common.position": {
+      "x": 3000,
+      "y": 269
+    }
+  },
+  "node::this_is_barbershop": {
+    "common.position": {
+      "x": 1125.0927732020245,
+      "y": 396.60826592795286
+    }
+  },
+  "node::schedule_weekday": {
+    "common.position": {
+      "x": -3.324655968969623,
+      "y": 226.04856540572936
+    }
+  },
+  "node::schedule_haircut_day": {
+    "common.position": {
+      "x": 1119.9227440342988,
+      "y": 88.91042820423677
+    }
+  },
+  "node::confirm_appointment": {
+    "common.position": {
+      "x": 598.069744017711,
+      "y": 373.76718419481983
+    }
+  },
+  "node::can_help_then": {
+    "common.position": {
+      "x": 600,
+      "y": 1043
+    }
+  },
+  "node::soda_on_tap": {
+    "common.position": {
+      "x": 0,
+      "y": 46.62680061685542
+    }
+  },
+  "node::no_dice_bye": {
+    "common.position": {
+      "x": 600,
+      "y": 1189
+    }
+  },
+  "node::by_card": {
+    "common.position": {
+      "x": 2400,
+      "y": 495
+    }
+  },
+  "node::in_store": {
+    "common.position": {
+      "x": 1706.895019089709,
+      "y": 269.1685831400677
+    }
+  },
+  "node::payment": {
+    "common.position": {
+      "x": 1800,
+      "y": 362
+    }
+  },
+  "node::repeat_order": {
+    "common.position": {
+      "x": 600,
+      "y": 372
+    }
+  },
+  "node::confirm_food_order": {
+    "common.position": {
+      "x": 1200,
+      "y": 362
+    }
+  },
+  "node::connect_me": {
+    "common.position": {
+      "x": 0,
+      "y": 701
+    }
+  },
+  "node::delivery": {
+    "common.position": {
+      "x": 0,
+      "y": 515
+    }
+  },
+  "node::place_order": {
+    "common.position": {
+      "x": 600,
+      "y": 186
+    }
+  },
+  "node::success_bye": {
+    "common.position": {
+      "x": 3000,
+      "y": 515
+    }
+  },
+  "node::pay_in_store": {
+    "common.position": {
+      "x": 2400,
+      "y": 269
+    }
+  },
+  "node::food_available": {
+    "common.position": {
+      "x": 0,
+      "y": 289
+    }
+  },
+  "node::new_node0": {
+    "common.position": {
+      "x": 600,
+      "y": 663.5095622931957
+    }
+  },
+  "node::when_call_back": {
+    "common.position": {
+      "x": 600,
+      "y": 1291
+    }
+  },
+  "node::call_back": {
+    "common.position": {
+      "x": 1200,
+      "y": 1291
+    }
+  },
+  "node::question_1": {
+    "common.position": {
+      "x": 600,
+      "y": 886
+    }
+  },
+  "node::q1Evaluate": {
+    "common.position": {
+      "x": 1200,
+      "y": 886
+    }
+  },
+  "node::question_1_n": {
+    "common.position": {
+      "x": 1800,
+      "y": 937.5
+    }
+  },
+  "node::q1_n_to_q2": {
+    "common.position": {
+      "x": 2400,
+      "y": 937.5
+    }
+  },
+  "node::question_2": {
+    "common.position": {
+      "x": 3000,
+      "y": 886
+    }
+  },
+  "node::q2Evaluate": {
+    "common.position": {
+      "x": 3600,
+      "y": 886
+    }
+  },
+  "node::question_2_n": {
+    "common.position": {
+      "x": 4200,
+      "y": 937.5
+    }
+  },
+  "node::q1_n_to_q3": {
+    "common.position": {
+      "x": 3600,
+      "y": 465
+    }
+  },
+  "node::question_3": {
+    "common.position": {
+      "x": 5400,
+      "y": 886
+    }
+  },
+  "node::q3Evaluate": {
+    "common.position": {
+      "x": 6000,
+      "y": 886
+    }
+  },
+  "node::question_3_p": {
+    "common.position": {
+      "x": 7200,
+      "y": 793
+    }
+  },
+  "node::question_3_n": {
+    "common.position": {
+      "x": 6600,
+      "y": 979
+    }
+  },
+  "node::q3_n_to_final": {
+    "common.position": {
+      "x": 6000,
+      "y": 362
+    }
+  },
+  "node::q2_n_to_q3": {
+    "common.position": {
+      "x": 4800,
+      "y": 937.5
+    }
+  },
+  "node::q3_to_final": {
+    "common.position": {
+      "x": 7200,
+      "y": 979
+    }
+  },
+  "node::final_q": {
+    "common.position": {
+      "x": 7800,
+      "y": 886
+    }
+  },
+  "node::final_bye": {
+    "common.position": {
+      "x": 8400,
+      "y": 886
+    }
+  },
+  "node::how_are_you": {
+    "common.position": {
+      "x": 0,
+      "y": 209
+    }
+  }
+}
