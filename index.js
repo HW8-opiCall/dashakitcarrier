@@ -13,6 +13,11 @@ async function main()
 
   app.ttsDispatcher = () => "dasha";
 
+  app.setExternal("function1", (args)=> {
+    //TODO: implement your external function here
+    console.log(args.log);
+  });
+
   await app.start();
 
   const conv = app.createConversation({ phone: process.argv[2] ?? "", name: process.argv[3] ?? "" });

@@ -36,6 +36,7 @@ node yes
 {
     do 
     {
+        var result = external function1("test");    //call your external function
         #say("yes"); //call on phrase "question_1" from the phrasemap
         exit;
     }

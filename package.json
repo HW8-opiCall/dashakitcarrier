@@ -1,5 +1,5 @@
 {
-  "name": "dasha-first-app",
+  "name": "blank-slate-app",
   "version": "0.1.0",
   "license": "MIT",
   "main": "index.js",
@@ -11,6 +11,6 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "@dasha.ai/sdk": "^0.3.0"
+    "@dasha.ai/sdk": "^0.6.1"
   }
 }
