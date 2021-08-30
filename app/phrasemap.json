@@ -21,8 +21,7 @@
       "repeat":
       [
         {"text": "I was just saying, can you hear me " },
-        {"id": "name", "type": "dynamic" },
-        { "text": "?" }
+        {"id": "name", "type": "dynamic" }
         ]
     },
 
