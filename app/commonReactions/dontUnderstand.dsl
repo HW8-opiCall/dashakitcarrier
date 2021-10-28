@@ -1,62 +1,92 @@
 library
+
 context
 {
     output status:string?;
     output serviceStatus:string?;
-    du_text: string?;
-}
-
-digression dont_understand_hangup_params
-{
-    conditions { on false; }
-    var responses: Phrases[] = ["dont_understand_forward"];
-    var status = "DontUnderstandHangup";
-    var serviceStatus = "Done";
-    do
-    {
-    }
-    transitions
-    {
-    }
 }
 
 digression dont_understand
 {
-    conditions { on true priority -1000; }
-    var retriesLimit=0;
-    var counter=0;
-    var resetOnRecognized=false;
-    var responses: Phrases[] = ["dont_understand"];
+    conditions
+    {
+        on true priority -1000;
+    }
+    
+    // set retriesLimit == -1 if retries are unlimited
+    // set retriesLimit > 0 if you have limited dont_understand retries
+    var retriesLimit = 1;
+    var counter = 0;
+    var resetOnRecognized = true;
+    // set repeat_phrase == true if you want to repeat last phrase, overwise repeat_phrase == false
+    var repeat_phrase = false;
+    // add more phrases maps if you need to say something else
+    var responses =
+    {
+        statement_phrases: ["dont_understand"],
+        request_phrases:["dont_understand_request"],
+        question_phrases: ["dont_understand_question"],
+        default_phrases: ["dont_understand"]
+    }
+    ;
+    
     do
     {
-        set $du_text = #getMessageText();
-        //#log("entering dont_understand digression");
-        //#log($du_text);
-
-        if (digression.dont_understand.counter > digression.dont_understand.retriesLimit)
+        if (digression.dont_understand.retriesLimit > 0)
         {
-            goto hangup;
+            if (digression.dont_understand.counter >= digression.dont_understand.retriesLimit)
+            {
+                goto hangup;
+            }
+            set digression.dont_understand.counter = digression.dont_understand.counter + 1;
+            set digression.dont_understand.resetOnRecognized = false;
         }
-        set digression.dont_understand.counter=digression.dont_understand.counter+1;
-        set digression.dont_understand.resetOnRecognized = false;
-        for (var item in digression.dont_understand.responses)
+        
+        var sentenceType = #getSentenceType();
+        var response: Phrases[] = [];
+        if (sentenceType == "statement")
+        {
+            set response = digression.dont_understand.responses.statement_phrases;
+        }
+        else if (sentenceType == "request")
+        {
+            set response = digression.dont_understand.responses.request_phrases;
+        }
+        else if (sentenceType == "question")
+        {
+            set response = digression.dont_understand.responses.question_phrases;
+        }
+        else
+        {
+            set response = digression.dont_understand.responses.default_phrases;
+        }
+        for (var item in response)
         {
             #say(item, repeatMode: "ignore");
         }
-        //#repeat(accuracy: "short");
+        
+        if (digression.dont_understand.repeat_phrase)
+        {
+            #repeat(accuracy: "short");
+        }
         return;
     }
+    
     transitions
     {
         hangup: goto dont_understand_hangup;
     }
 }
 
-preprocessor digression dont_understand_preprocessor
+preprocessor digression reset_counter
 {
-    conditions { on true priority 50000; }
+    conditions
+    {
+        on true priority 50000;
+    }
+    
     do
-    {        
+    {
         if (digression.dont_understand.resetOnRecognized)
         {
             set digression.dont_understand.counter = 0;
@@ -64,27 +94,20 @@ preprocessor digression dont_understand_preprocessor
         set digression.dont_understand.resetOnRecognized = true;
         return;
     }
-    transitions
-    {
-    }
 }
 
 node dont_understand_hangup
 {
     do
     {
-        for (var item in digression.dont_understand_hangup_params.responses)
+        // add more phrases maps if you need to say something else
+        var responses: Phrases[] = ["dont_understand_forward"];
+        for (var item in responses)
         {
             #say(item, repeatMode: "ignore");
         }
-        set $status=digression.dont_understand_hangup_params.status;
-        set $serviceStatus=digression.dont_understand_hangup_params.serviceStatus;
-
-        //#forward("12223334455");    //use if you want to transfer a call
-        #disconnect();
+        set $status = "DontUnderstandHangup";
+        set $serviceStatus = "Done";
         exit;
-    }
-    transitions
-    {
     }
 }
