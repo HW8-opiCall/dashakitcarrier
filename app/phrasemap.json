@@ -71,6 +71,12 @@
           [{ "text": "Could you say it one more time?" }]
         ]
       },
+      "dont_understand_request": [
+        { "text": "Sorry, i cant do it now. May be some day." }
+      ],
+      "dont_understand_question": [
+        { "text": "Sorry, i dont understand your question. Can you say it otherwise?" }
+      ],
       "dont_understand_hangup": [
         {
           "text": "I'm sorry I can barely hear you. I'll try to call you later! Bye!"
@@ -106,6 +112,8 @@
       "i_will_wait": {},
       "i_can_hear_you": {},
       "dont_understand": {},
+      "dont_understand_request": {},
+      "dont_understand_question": {},
       "dont_understand_hangup": {},
       "dont_understand_forward": {},
       "mhm": {},
