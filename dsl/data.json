@@ -1,0 +1,73 @@
+{
+    "version": "v2",
+    "intents": {
+      "status_okay": {
+        "includes": [
+          "i'm okay",
+          "i feel fine",
+          "don't call me",
+          "i'm good",
+          "nothing's wrong",
+          "i'm feeling okay"
+        ]
+      },
+      "no_symptoms": {
+        "includes": [
+          "none of the above",
+          "none of those",
+          "nope",
+          "neither",
+          "i'm all good",
+          "nada",
+          "no",
+          "none"
+        ]
+      },
+      "status_not_okay": {
+        "includes": [
+          "i'm not okay",
+          "i don't feel fine",
+          "i think something's wrong",
+          "i don't feel good",
+          "i'm dizzy",
+          "my lips are blue"
+        ]
+      },
+      "status_dizzy": {
+        "includes": [
+          "i feel dizzy",
+          "yes, i feel dizzy",
+          "yes",
+          "dizzy",
+          "head spinning",
+          "the world's spinning",
+          "i don't know what's going on",
+          "i'm going to puke"
+        ]
+      },
+      "status_nobreatheorawake": {
+        "includes": [
+          "i'm drowsy",
+          "i'm very sleepy",
+          "i can't breathe",
+          "hard to breathe",
+          "can't stay awake",
+          "fall asleep",
+          "i think i'm going to die"
+        ]
+      },
+      "status_overdose": {
+        "includes": [
+          "i can't breathe",
+          "i'm dying",
+          "help me",
+          "i'm going to die",
+          "i over dosed",
+          "i need an ambulance",
+          "i need naloxone",
+          "call an ambulance",
+          "i'm about to die"
+        ]
+      }
+    }
+  }

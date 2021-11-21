@@ -1,15 +1,13 @@
 {
-  "name": "blank-slate-app",
-  "version": "0.1.0",
-  "license": "MIT",
-  "main": "index.js",
+  "name": "sip-outbound-calls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "@dasha.ai/cli": ">=0.1.0",
-    "prettier": "^2.2.1"
-  },
+  "author": "Andrey Chernykh",
+  "license": "ISC",
   "dependencies": {
     "@dasha.ai/sdk": "^0.6.5"
   }

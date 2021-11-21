@@ -1,0 +1,23 @@
+{
+    "formatVersion": "2",
+    "name": "sip-outbound",
+    "description": "sip test application",
+    "nlu": {
+      "skills": [
+        "common_phrases",
+        "sentiment"
+      ],
+      "language": "en-US",
+      "customIntents": {
+        "file": "./data.json"
+      }
+    },
+    "nlg": {
+      "type": "phrases",
+      "file": "phrasemap.json",
+      "signatureFile": "phrasemap.json"
+    },
+    "dialogue": {
+      "file": "main.dsl"
+    }
+}

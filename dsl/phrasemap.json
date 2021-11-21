@@ -1,0 +1,24 @@
+{
+    "default": {
+        "voiceInfo": {
+          "lang": "en-US",
+          "speaker": "default",
+          "speed": 0.9,
+          "variation": 20
+        },
+        "phrases": {
+          "greeting": [{ "text": "Hello, can you hear me?"}],
+          "i_can_hear": [{ "text": "And I can hear you too. Goodbye"}],
+          "can_you_hear": [{"text": "Can you hear me? I can hear you"}],
+          "i_cant_hear": [{"text": "I can't hear your. Goodbye"}],
+          "they_cant_hear": [{"text": "You can't hear me. So sorry and goodbye."}]
+        },
+        "macros": {
+          "greeting": {},
+          "i_can_hear": {},
+          "can_you_hear": {},
+          "i_cant_hear": {},
+          "they_cant_hear": {}
+        }
+    }
+}

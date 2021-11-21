@@ -1,0 +1,26 @@
+|Time     | 40.78.158.239                         |
+|         |                   | 54.172.60.1       |                   
+|0.000000 |         INVITE SDP (g711A g7          |SIP INVITE From: sip:+1YYYYYYYYYY@test-app.pstn.twilio.com To:sip:+1XXXXXXXXXX@test-app.pstn.twilio.com Call-ID:Zfb7.ctEA1ddeIonn.zu81sztZ5gW4wW CSeq:27757
+|         |(5060)   ------------------>  (5060)   |
+|0.000154 |         100 trying -- your c          |SIP Status 100 trying -- your call is important to us
+|         |(5060)   <------------------  (5060)   |
+|0.012540 |         407 Proxy Authentica          |SIP Status 407 Proxy Authentication required
+|         |(5060)   <------------------  (5060)   |
+|0.048714 |         ACK       |                   |SIP ACK From: sip:+1YYYYYYYYYY@test-app.pstn.twilio.com To:sip:+1XXXXXXXXXX@test-app.pstn.twilio.com CSeq:27757
+|         |(5060)   ------------------>  (5060)   |
+|0.053742 |         INVITE SDP (g711A g7          |SIP INVITE From: sip:+1YYYYYYYYYY@test-app.pstn.twilio.com To:sip:+1XXXXXXXXXX@test-app.pstn.twilio.com Call-ID:Zfb7.ctEA1ddeIonn.zu81sztZ5gW4wW CSeq:27758
+|         |(5060)   ------------------>  (5060)   |
+|0.053909 |         100 trying -- your c          |SIP Status 100 trying -- your call is important to us
+|         |(5060)   <------------------  (5060)   |
+|8.686105 |         183 Session progress          |SIP Status 183 Session progress
+|         |(5060)   <------------------  (5060)   |
+|8.964915 |         180 Ringing                   |SIP Status 180 Ringing
+|         |(5060)   <------------------  (5060)   |
+|13.078130|         200 OK SDP (g711U g7          |SIP Status 200 OK
+|         |(5060)   <------------------  (5060)   |
+|13.120187|         ACK       |                   |SIP Request INVITE ACK 200 CSeq:27758
+|         |(5060)   ------------------>  (5060)   |
+|19.163245|         BYE       |                   |SIP Request BYE CSeq:27759
+|         |(5060)   ------------------>  (5060)   |
+|19.194711|         200 OK    |                   |SIP Status 200 OK
+|         |(5060)   <------------------  (5060)   |

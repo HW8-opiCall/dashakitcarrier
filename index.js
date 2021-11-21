@@ -1,36 +1,20 @@
 const dasha = require("@dasha.ai/sdk");
 const fs = require("fs");
 
+async function main() {
+  const app = await dasha.deploy(`${__dirname}/dsl`);
 
-async function main() 
-{
-  const app = await dasha.deploy("./app");
-
-  app.connectionProvider = async (conv) =>
-    conv.input.phone === "chat"
-      ? dasha.chat.connect(await dasha.chat.createConsoleChat())
-      : dasha.sip.connect(new dasha.sip.Endpoint("default"));
-
-  app.ttsDispatcher = () => "dasha";
-
-  app.setExternal("function1", (args)=> {
-    //TODO: implement your external function here
-    console.log(args.log);
-  });
+  //app.setExternal("sendResponse", (args, conv) => {
+  //  return JSON.stringify(args.data); // TODO
+  //});
 
   await app.start();
-
-  const conv = app.createConversation({ phone: process.argv[2] ?? "", name: process.argv[3] ?? "" });
-
-  if (conv.input.phone !== "chat") conv.on("transcription", console.log);
-
+  
   const logFile = await fs.promises.open("./log.txt", "w");
   await logFile.appendFile("#".repeat(100) + "\n");
-
-  conv.on("transcription", async (entry) => {
-    await logFile.appendFile(`${entry.speaker}: ${entry.text}\n`);
-  });
-
+  
+  const conv = app.createConversation({ endpoint: process.argv[2] });
+  
   conv.on("debugLog", async (event) => {
     if (event?.msg?.msgId === "RecognizedSpeechMessage") {
       const logEntry = event?.msg?.results[0]?.facts;
@@ -38,14 +22,15 @@ async function main()
     }
   });
 
-  const result = await conv.execute();
+  conv.sip.config = "twilio";
+  conv.audio.tts = "dasha";
 
+  const result = await conv.execute();
   console.log(result.output);
 
   await app.stop();
   app.dispose();
-
-  await logFile.close();
 }
 
-main().catch(() => {});
+
+main();
