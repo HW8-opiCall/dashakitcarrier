@@ -3,6 +3,7 @@
     "intents": {
       "status_okay": {
         "includes": [
+          "yes",
           "i'm okay",
           "i feel fine",
           "don't call me",
@@ -13,18 +14,19 @@
       },
       "no_symptoms": {
         "includes": [
+          "no",
           "none of the above",
           "none of those",
           "nope",
           "neither",
           "i'm all good",
-          "nada",
-          "no",
           "none"
         ]
       },
       "status_not_okay": {
         "includes": [
+          "no",
+          "not okay",
           "i'm not okay",
           "i don't feel fine",
           "i think something's wrong",
@@ -47,6 +49,7 @@
       },
       "status_nobreatheorawake": {
         "includes": [
+          "yes",
           "i'm drowsy",
           "i'm very sleepy",
           "i can't breathe",

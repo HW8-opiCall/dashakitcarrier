@@ -25,7 +25,7 @@ node status_okay
 {
   do
   {
-    #sayText("Glad to hear you're okay. If you ever need any help, call me back. Stay safe!");
+    #sayText("Glad to hear you're okay. If you ever need any help, reach out. Stay safe!");
     #disconnect();
     exit;
   }
