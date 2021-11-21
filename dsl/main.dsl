@@ -10,76 +10,34 @@ start node root //start node
   {
     #connectSafe($endpoint); //connect via phone
     #waitForSpeech(1000);
-    #sayText("Hi whitetiger, this is Dasha calling from opiCall. Are you alright?");
+    #sayText("This is Dasha from oh pee call. Your friend white tiger has overdosed near 1151 Richmond Street, London, Ontario. We've sent the location through text. Please bring your Naloxone kit if it is safe to do so. Will you be administering naloxone to white tiger?");
     wait *; //wait for user speech
   }
-  transitions
+  transitions 
   {
-    status_okay: goto status_okay on #messageHasIntent("status_okay");
-    status_not_okay: goto status_not_okay on #messageHasIntent("status_not_okay");
-    status_overdose: goto status_overdose on #messageHasIntent("status_overdose");
+    yes: goto yes on #messageHasIntent("yes");
+    no: goto no on #messageHasIntent("no");
+
   }
 }
 
-node status_okay
+node yes
 {
   do
   {
-    #sayText("Glad to hear you're okay. If you ever need any help, reach out. Stay safe!");
+    external sendResponse(#messageGetData("help"));
+    #sayText("We've notified white tiger that you are on the way with naloxone. Thank you for being a good samaritan. Please stay safe, and always call 9 1 1 when required.");
     #disconnect();
     exit;
   }
 }
 
-node status_not_okay
+node no
 {
   do
   {
-    #sayText("Are you feeling dizzy or confused?");
-    wait *; //wait for user speech
-  }
-  transitions
-  {
-    status_okay: goto status_okay on #messageHasIntent("no_symptoms");
-    status_dizzy: goto status_dizzy on #messageHasIntent("status_dizzy");
-    status_overdose: goto status_overdose on #messageHasIntent("status_overdose");
-  }
-}
-
-
-node status_dizzy
-{
-  do
-  {
-    #sayText("Are you having difficulty breathing or staying awake?");
-    wait *; //wait for user speech
-  }
-  transitions
-  {
-    status_caution: goto status_caution on #messageHasIntent("no_symptoms");
-    status_overdose: goto status_overdose on #messageHasAnyIntent(["status_nobreatheorawake", "status_overdose"]);
-  }
-}
-
-
-node status_caution
-{
-  do
-  {
-    #sayText("Please be careful. You're experiencing some symptoms and may be at risk of an overdose if you continue. Stay safe, whitetiger.");
+    #sayText("Okay, we have not notified whitetiger that you declined. Please stay safe.");
     #disconnect();
-    exit; // TODO: set status of user to caution/warning/lookout
-  }
-}
-
-
-
-node status_overdose
-{
-  do
-  {
-    external sendResponse(#messageGetData("symptom"));
-    #sayText("Stay on the line. Don't worry, help is on the way. We've alerted the opiCall network and help will be there for you very soon.");
-    wait *;
+    exit;
   }
 }
